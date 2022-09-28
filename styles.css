@@ -1,0 +1,144 @@
+:root{
+    --bg-1: #2e3440;
+    --bg-2: #3b4252;
+    --bg-3: #434c5e;
+    --bg-4: #4c566a;
+
+    --fg-1: #eceff4;
+    --fg-2: #e5e9f0;
+    --fg-3: #d8dee9;
+
+    --red:    #bf616a;
+    --orange: #d08770;
+    --yellow: #ebcb8b;
+    --green:  #a3be8c;
+    --purple: #b48ead;
+
+    --blue: #5e81ac;
+    --light-blue: #81a1c1;
+    --cyan: #88c0d0;
+    --teal: #8fbcbb;
+}
+
+body{
+    background-color: var(--bg-1);
+    font-family: monospace;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro-image{
+    min-width: none;
+    width: 100%;
+
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+#intro-image:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+
+#sections{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+#article-title{
+    margin-top: 4rem;
+    color: var(--red);
+    font-size: 48px;
+}
+
+.article-subtitle{
+    color: var(--yellow);
+    font-size: 48px;
+    
+}
+
+.intro-paragraph{
+    font-size: xxx-large;
+    color: var(--fg-1);
+}
+
+.window-list-element{
+    color: var(--green);
+}
+
+a, a:hover, a:focus, a:active {
+    color: var(--light-blue);
+}
+
+a u {
+    color: var(--light-blue);
+}
+
+b {
+    color: var(--cyan)
+}
+
+u {
+    color: var(--purple);
+}
+
+.table{
+    display: flex;
+}
+.table-headers{
+    display: flex;
+    width: 100%;
+    justify-content:space-evenly;
+}
+@media screen and (min-width: 1200px){ /* Desktop */
+    @media screen and (orientation:portrait) {
+        #intro-image{
+            width: 90%;
+        }
+        #sections{
+            width: 90%;
+        }
+    }
+    @media screen and (orientation:landscape) {
+    
+        #intro-image{
+            width: 50%;
+        }
+        #sections{
+            width: 50%;
+        }
+    }
+    
+
+} 
+
+@media screen and (max-width: 1199px){ /* Mobile */
+    #intro-image{
+        width: 100%;
+        border-radius: 1rem;
+    }
+    #sections{
+        width: 100%;
+    }
+
+    .intro-paragraph{
+        font-size: xx-large;
+
+    }
+    .article-subtitle{
+        font-size: 32px;
+
+    }
+
+    #article-title{
+        font-size: 32px;
+        text-align: center;
+    }
+} 
